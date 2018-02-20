@@ -1,0 +1,31 @@
+
+<div class="list top">
+  <h1>List of tasks</h1>
+</div>
+
+<% @tasks.each do |task| %>
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8">
+    <div class="list">
+      <div class="checkbox">
+       <%= check_box("tag", tag.id, {checked: task.completed}) %>
+     </div>
+     <div class="title">
+      <p><%= link_to task.title, task_path(task) %></p>
+     </div>
+     <div class="delete">
+      <p><%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8">
+    <div class="list">
+      <%= link_to "+ Add a new task", tasks_new_path %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="list top">
+  <h1>Task</h1>
+</div>
+<div class="list top">
+  <p><%= @task.title %></p>
+</div>
+<div class="list">
+  <p><%= @task.details %></p>
+</div>
+<div class="list">
+  <p><%= @task.completed %></p>
+</div>
+<div class="list">
+  <%= link_to "home", tasks_path %>
+</div>
+<div class="list">
+  <%= link_to "edit", task_edit_path %>
+</div>
