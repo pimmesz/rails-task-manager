@@ -1,4 +1,3 @@
-
 <div class="list top">
   <h1>List of tasks</h1>
 </div>
@@ -12,8 +11,8 @@
      </div>
      <div class="title">
       <p><%= link_to task.title, task_path(task) %></p>
-     </div>
-     <div class="delete">
+    </div>
+    <div class="delete">
       <p><%= link_to "Delete", task_path(task),
       method: :delete,
       data: { confirm: "Are you sure?" } %></p>
